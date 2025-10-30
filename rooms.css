@@ -1,0 +1,219 @@
+/* --- A. Rooms Page Hero --- */
+.rooms-hero {
+    background: url('https://picsum.photos/id/292/1920/1080') no-repeat center center/cover;
+    background-position: top center;
+    height: 50vh;
+}
+
+/* --- B. Residences Grid Showcase --- */
+.residences-showcase {
+    padding: 6rem 1.5rem;
+    background-color: var(--color-secondary);
+}
+
+/* CSS GRID for the main room layout (Desktop first) */
+.room-card-grid {
+    display: grid;
+    /* Three columns by default */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+}
+
+.room-card {
+    background-color: var(--color-white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px); /* Lift card slightly more */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.room-card:hover .card-image-container img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+.card-content h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.card-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.room-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+.room-features li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+.room-features .icon {
+    color: var(--color-accent);
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+.price-tag {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+/* --- C. Presidential Feature Block --- */
+.presidential-feature {
+    padding: 8rem 0;
+    background-color: var(--color-white);
+}
+
+.presidential-content-wrap {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.presidential-image-box {
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.presidential-image-box img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+.presidential-text-box {
+    flex: 1.2;
+    padding: 2rem 0;
+}
+.presidential-text-box h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+.presidential-text-box .lead-paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- D. Testimonial/Review Section --- */
+.review-feature {
+    padding: 5rem 1.5rem;
+}
+
+.review-box {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    border-top: 5px solid var(--color-accent);
+}
+
+.review-box p {
+    font-size: 1.15rem;
+}
+
+.quote-icon {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--color-accent);
+    display: block;
+    line-height: 0.5;
+    margin-bottom: 1rem;
+}
+
+.reviewer-name {
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    display: block;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+/* --- E. Final Booking CTA --- */
+.final-booking-cta {
+    padding: 4rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.final-booking-cta h3 {
+    color: var(--color-white);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.final-booking-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* --- F. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .residences-showcase {
+        padding: 4rem 1.5rem;
+    }
+    .room-card-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .presidential-feature {
+        padding: 4rem 0;
+    }
+    .presidential-content-wrap {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .presidential-image-box {
+        order: -1;
+    }
+    .presidential-image-box img {
+        min-height: 300px;
+    }
+    .review-feature {
+        padding: 3rem 1.5rem;
+    }
+    .review-box {
+        padding: 2rem;
+    }
+    .review-box p {
+        font-size: 1rem;
+    }
+    .quote-icon {
+        font-size: 3rem;
+    }
+}

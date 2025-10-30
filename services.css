@@ -1,0 +1,167 @@
+/* --- A. Services Page Hero --- */
+.services-hero {
+    background: url('https://picsum.photos/id/357/1920/1080') no-repeat center center/cover;
+    background-position: center bottom;
+    height: 50vh;
+}
+
+/* --- B. Introduction to Concierge --- */
+.concierge-intro {
+    padding: 6rem 1.5rem 3rem;
+    background-color: var(--color-secondary);
+}
+
+/* --- C. Alternating Split-View Services Detail --- */
+.services-detail-section {
+    padding-bottom: 6rem;
+}
+
+.service-block {
+    padding: 3rem 0;
+}
+
+/* Light background block (Text Black, Background Cream) */
+.block-light {
+    background-color: var(--color-white);
+    color: var(--color-text);
+}
+
+/* Dark background block (Text White, Background Green) */
+.block-dark {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.service-content-wrap {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 3rem 0; 
+}
+
+/* Reverse the layout for the dark blocks */
+.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.service-text {
+    flex: 1.2;
+    padding: 1rem 0;
+}
+.service-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.service-text.text-white h3 {
+    color: var(--color-white);
+}
+
+.service-text p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-image {
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.service-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.service-block:hover .service-image img {
+    transform: scale(1.03); /* Subtle zoom on block hover */
+}
+
+.service-points {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+.service-points li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.service-points .icon {
+    color: var(--color-accent);
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Button variant for dark blocks */
+.btn-white-border {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+}
+.btn-white-border:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border-color: var(--color-white);
+}
+
+/* --- D. Guarantee Statement (Pull-Quote Break) --- */
+.pull-quote-banner {
+    background-color: var(--color-accent); /* Use Gold for the break */
+    padding: 5rem 1.5rem;
+}
+
+.pull-quote-banner p {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: var(--color-white);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- E. Final CTA to Connect --- */
+.final-cta-connect {
+    padding: 4rem 1.5rem;
+    background-color: var(--color-secondary);
+}
+
+.final-cta-connect h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.final-cta-connect p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* --- F. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .service-content-wrap, .reverse-layout {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+    .service-image {
+        order: -1;
+    }
+    .service-image img {
+        min-height: 250px;
+    }
+    .service-block {
+        padding: 4rem 0;
+    }
+    .service-text {
+        padding: 0 1.5rem;
+    }
+    .pull-quote-banner {
+        padding: 3rem 1.5rem;
+    }
+    .final-cta-connect {
+        padding: 3rem 1.5rem;
+    }
+}

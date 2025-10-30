@@ -1,0 +1,184 @@
+/* --- A. Contact Page Hero --- */
+.contact-hero {
+    background: url('https://picsum.photos/id/1052/1920/1080') no-repeat center center/cover;
+    background-position: center 30%;
+    height: 50vh;
+}
+
+/* --- B. Contact Form and Info Split-View --- */
+.contact-split-section {
+    padding: 6rem 1.5rem;
+    background-color: var(--color-secondary);
+}
+
+.split-content-wrap {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.contact-info-block {
+    flex: 1;
+    background-color: var(--color-white);
+    padding: 3rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--color-accent);
+}
+
+.contact-form-block {
+    flex: 1.5; /* Form is slightly wider for input space */
+    padding: 2rem 0;
+}
+
+.contact-info-block h3, .contact-form-block h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* Info Group Styling */
+.info-group {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+}
+.info-group:first-child {
+    border-top: none;
+    padding-top: 0;
+}
+
+.info-group .info-icon {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+    margin-right: 10px;
+}
+.info-group h4 {
+    display: inline;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+.info-group p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 30px;
+}
+
+
+/* Form Styling */
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+}
+
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea,
+.contact-form select {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-white);
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    border-color: var(--color-accent);
+    outline: none;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+}
+
+
+/* --- C. Location and Map Section --- */
+.location-map-section {
+    background-color: var(--color-primary);
+    padding: 6rem 0;
+}
+.location-map-section .section-title {
+    color: var(--color-white);
+}
+
+.map-placeholder {
+    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #555; /* Placeholder map color */
+    border: 5px solid var(--color-accent);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--color-white);
+    font-weight: 600;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.map-placeholder:hover .map-overlay {
+    opacity: 1; /* Show button on hover */
+}
+
+
+/* --- D. Mobile Responsiveness --- */
+@media (max-width: 900px) {
+    .contact-split-section {
+        padding: 4rem 1.5rem;
+    }
+    .split-content-wrap {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-info-block {
+        order: -1;
+        padding: 2rem;
+    }
+    .contact-form-block {
+        padding: 0;
+    }
+    .location-map-section {
+        padding: 4rem 0;
+    }
+    .map-placeholder {
+        height: 350px;
+        width: 100%;
+        border-width: 3px;
+    }
+    .info-group p {
+        margin-left: 0;
+    }
+}

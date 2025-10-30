@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Lux Aeterna - Lagos, Nigeria</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="contact.css"> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <header class="main-header">
+        <div class="logo">LUX AETERNA</div>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="hamburger"></span>
+        </label>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="rooms.html">Rooms</a></li>
+                <li><a href="amenities.html">Amenities</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Connect</a></li>
+            </ul>
+        </nav>
+    </header>
+    </header>
+
+    <section class="page-hero contact-hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-down">Let's Talk. Get in Touch with Our Dedicated Team.</h1>
+        </div>
+    </section>
+
+    <section class="contact-split-section">
+        <div class="container split-content-wrap">
+            <div class="contact-info-block" data-aos="fade-right">
+                <h3>Contact Details.</h3>
+                <p>For immediate needs, please call our 24-hour reception desk. For general inquiries, email us or use the form below. **We commit to a prompt, professional response.**</p>
+                
+                <div class="info-group">
+                    <span class="info-icon">📞</span>
+                    <h4>24-Hour Reception</h4>
+                    <p>+234 (0) 1 555 8888</p>
+                </div>
+                
+                <div class="info-group">
+                    <span class="info-icon">📧</span>
+                    <h4>General Inquiries</h4>
+                    <p>hello@luxaeterna.ng</p>
+                </div>
+                
+                <div class="info-group">
+                    <span class="info-icon">📍</span>
+                    <h4>Our Location</h4>
+                    <p>123 Elegance Blvd, Ikoyi, Lagos, Nigeria</p>
+                </div>
+            </div>
+
+            <div class="contact-form-block" data-aos="fade-left">
+                <h3>Send Us a Message.</h3>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject / Inquiry Type</label>
+                        <select id="subject" name="subject">
+                            <option value="General">General Inquiry</option>
+                            <option value="Reservation">New Reservation / Booking Inquiry</option>
+                            <option value="Concierge">Concierge Service Request</option>
+                            <option value="Feedback">Feedback on a Stay</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">Send Message to Desk</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-map-section" id="map-section">
+        <div class="container-fluid">
+            <h2 class="section-title text-white" data-aos="fade-down">Our Premier Ikoyi Location</h2>
+            
+            <div class="map-placeholder" data-aos="zoom-in">
+                <p>Google Maps Placeholder: Showing **123 Elegance Blvd, Ikoyi, Lagos, Nigeria**</p>
+                <div class="map-overlay">
+                    <a href="https://maps.google.com/?q=123+Elegance+Blvd,+Ikoyi,+Lagos,+Nigeria" target="_blank" class="btn btn-primary">Open in Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Lux Aeterna Hotel | Address: 123 Elegance Blvd, Ikoyi, Lagos, Nigeria | Phone: +234 (0) 1 555 8888</p>
+        <p>© 2025 Lux Aeterna Hotel. Setting the Standard Since 2022.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

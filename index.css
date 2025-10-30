@@ -1,0 +1,447 @@
+/* --- A. Home Page Hero --- */
+.hero-section {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 0; 
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.hero-overlay-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 1.5rem;
+}
+
+.hero-section h1 {
+    font-size: clamp(3.8rem, 7vw, 6rem);
+    color: var(--color-white);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtext {
+    font-family: var(--font-body); 
+    font-weight: 300;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- B. Booking Bar (Desktop/Tablet) --- */
+.booking-bar {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    max-width: 1100px;
+    background-color: var(--color-primary); 
+    padding: 1.5rem 2rem;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(1px);
+    z-index: 10;
+}
+
+.booking-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+}
+
+.booking-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-accent); 
+}
+
+.booking-group input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    min-height: 48px; 
+}
+
+.booking-btn {
+    align-self: flex-end; 
+    padding: 0.8rem 1.5rem;
+    height: 48px; 
+}
+
+/* --- C. Welcome Section (Asymmetrical Layout) --- */
+.welcome-section {
+    padding: 8rem 0;
+    background-color: var(--color-secondary);
+}
+
+.welcome-block {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.welcome-content {
+    flex: 1.3;
+    z-index: 2;
+    padding: 3rem;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+}
+
+.welcome-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.welcome-image-wrapper {
+    flex: 1;
+    position: relative;
+    transform: translateY(-50px); 
+    z-index: 1;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- D. Experience Section (Skewed Background) --- */
+.experience-section {
+    padding: 8rem 0;
+    position: relative;
+    background-color: var(--color-primary);
+    overflow: hidden;
+}
+
+.experience-bg-skew {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    transform: skewY(-4deg); 
+    transform-origin: top left;
+    z-index: 0;
+}
+
+.experience-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.experience-text {
+    flex: 1;
+    padding: 3rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.experience-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 2rem;
+}
+.experience-list li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+.experience-list .icon {
+    color: var(--color-accent);
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.experience-cards-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.experience-cards-grid .card {
+    background-color: var(--color-white);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.experience-cards-grid .card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-cards-grid .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.experience-cards-grid .card h4 {
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem 0.5rem;
+    color: var(--color-accent);
+}
+.experience-cards-grid .card p {
+    padding: 0 1.5rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- E. Rooms Teaser --- */
+.teaser-residences {
+    padding: 6rem 1.5rem;
+    background-color: var(--color-white);
+}
+
+.residences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px; 
+}
+
+.residence-card {
+    background-color: var(--color-secondary);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.residence-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.card-image-wrap {
+    height: 250px;
+    overflow: hidden;
+}
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.residence-card:hover .card-image-wrap img {
+    transform: scale(1.05);
+}
+
+.card-content-wrap {
+    padding: 1.5rem;
+}
+.card-content-wrap h4 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+}
+.card-content-wrap p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.price-tag {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+.price-highlight {
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+.link-more {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-accent);
+    transition: all 0.3s ease;
+}
+.link-more:hover {
+    color: var(--color-accent);
+}
+
+/* --- F. Final CTA Section (Circular Image) --- */
+.final-cta-section {
+    padding: 6rem 1.5rem;
+    background-color: var(--color-primary);
+}
+
+.final-cta-section .container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.cta-content-box {
+    flex: 1.2;
+    color: var(--color-white);
+    padding: 2rem 0;
+}
+.cta-content-box h2 {
+    color: var(--color-white);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+.cta-content-box p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-image-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.img-responsive-round {
+    width: 100%;
+    max-width: 450px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%; 
+    border: 8px solid var(--color-accent); 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
+}
+.img-responsive-round:hover {
+    transform: scale(1.02);
+}
+
+
+/* --- G. ROBUST MOBILE RESPONSIVENESS (max-width: 900px) --- */
+@media (max-width: 900px) {
+    
+    .hero-section {
+        background-attachment: scroll; /* Remove parallax on mobile for performance */
+        height: auto;
+        padding-top: 120px; 
+        padding-bottom: 4rem; 
+    }
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+    .hero-subtext {
+        font-size: 1.2rem;
+    }
+
+    /* 1. Booking Bar FIX: Ensure 100% stack and flow */
+    .booking-bar {
+        position: static; /* CRITICAL: Remove absolute positioning */
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 1.5rem;
+        flex-direction: column; /* CRITICAL: Stack all elements */
+        gap: 15px;
+    }
+    .booking-group {
+        width: 100%;
+    }
+    .booking-btn {
+        width: 100%; /* CRITICAL: Full width button */
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .welcome-section, .experience-section, .teaser-residences, .final-cta-section {
+        padding: 4rem 0;
+    }
+
+    /* 2. Asymmetrical Content FIX: Welcome and Final CTA Layouts (Stack and Image Order) */
+    .welcome-block, .final-cta-section .container {
+        flex-direction: column; /* CRITICAL: Stack for mobile */
+        gap: 30px;
+        padding: 0 1.5rem; 
+    }
+
+    /* Welcome Section Ordering (Image first, text second, non-generic stacking) */
+    .welcome-content {
+        padding: 2rem 1.5rem; 
+        order: 1; /* Text content after image */
+    }
+    .welcome-image-wrapper {
+        transform: translateY(0); /* Remove desktop shift */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+        order: 0; /* Image first */
+    }
+    .img-responsive {
+        min-height: 350px;
+    }
+    .experience-text {
+        padding: 2rem;
+    }
+
+    /* 3. Grid Section FIX: Experience & Residences to single column */
+    .experience-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .experience-bg-skew {
+        transform: skewY(-2deg); /* Reduce skew angle */
+    }
+    .experience-cards-grid, .residences-grid {
+        grid-template-columns: 1fr; /* CRITICAL: Single column */
+        gap: 20px;
+    }
+    .experience-cards-grid .card img {
+        height: 200px;
+    }
+    
+    /* Final CTA Section Ordering (Circular image retains non-generic look) */
+    .cta-content-box {
+        order: 1; 
+        padding: 0; 
+    }
+    .cta-image-box {
+        justify-content: center;
+        order: 0;
+    }
+    .img-responsive-round {
+        width: 300px;
+        height: 300px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
