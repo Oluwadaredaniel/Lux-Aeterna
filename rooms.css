@@ -1,6 +1,6 @@
 /* --- A. Rooms Page Hero --- */
 .rooms-hero {
-    background: url('https://picsum.photos/id/292/1920/1080') no-repeat center center/cover;
+    background: url('https://plus.unsplash.com/premium_photo-1691852517460-b5fc0f8f9114?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFja2dyb3VufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500') no-repeat center center/cover;
     background-position: top center;
     height: 50vh;
 }

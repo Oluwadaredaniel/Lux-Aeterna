@@ -336,6 +336,14 @@ footer p:first-child {
     .nav-toggle-label {
         display: block; 
     }
+    
+    /* *** FIX: Force hamburger to white on dark mobile header *** */
+    .nav-toggle-label .hamburger,
+    .nav-toggle-label .hamburger::before,
+    .nav-toggle-label .hamburger::after {
+        background: var(--color-white); /* Ensures bars are visible against dark header */
+    }
+    /* *** END FIX *** */
 
     .main-header {
         padding: 1rem 1.5rem;
@@ -400,4 +408,21 @@ footer p:first-child {
         transform: rotate(45deg);
         top: 0;
     }
+}
+/* Additional styling for the design credit link */
+footer .design-credit {
+    margin-top: 1rem; /* Space it out from the main copyright */
+    font-size: 0.85rem; /* Make it slightly smaller */
+}
+
+footer .design-credit a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 600;
+}
+
+footer .design-credit a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
 }

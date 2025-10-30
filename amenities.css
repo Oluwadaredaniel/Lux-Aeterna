@@ -1,7 +1,7 @@
 /* --- A. Amenities Page Hero --- */
 .amenities-hero {
     /* Kept this image/style, it works well for the mood */
-    background: url('https://picsum.photos/id/214/1920/1080') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1652911367089-778a44753900?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fHNreSUyMHN3aW1taW5nJTIwcG9vbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500') no-repeat center center/cover;
     background-position: bottom center;
     height: 50vh;
 }
